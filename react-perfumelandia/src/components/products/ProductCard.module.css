@@ -1,0 +1,120 @@
+/* En: src/components/products/ProductCard.module.css */
+
+.productCard {
+    border: 1px solid #bbbbbb; /* Un borde más claro */
+    border-radius: 10px; /* Bordes un poco más redondeados */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    overflow: hidden; /* Asegura que la imagen se adapte a los bordes */
+    background-color: #fff;
+}
+.productCard:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    transform: translateY(-3px); /* Efecto ligero de "flotar" */
+}
+
+.imageContainer {
+    position: relative;
+    padding: 1rem;
+    height: 220px; /* Altura fija para las imágenes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9; /* Fondo suave para la imagen */
+    border-bottom: 1px solid #f0f0f0;
+}
+.productImage {
+    max-height: 100%; /* Asegura que la imagen no se desborde */
+    width: auto; /* Mantiene la proporción */
+    max-width: 100%;
+}
+
+/* Insignia de Descuento (ej: "Ahorra 62%") */
+.discountBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #3E2092; /* Tu color morado oscuro */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Insignia de Oferta Online */
+.onlineOffer {
+    font-size: 0.7rem; /* Un poco más pequeña */
+    font-weight: 600;
+    color: #922074; /* Tu color fucsia/magenta */
+    background-color: rgba(146, 32, 116, 0.1); /* Fondo transparente de tu color */
+    padding: 4px 8px;
+    border-radius: 5px;
+    align-self: flex-start; /* Se alinea a la izquierda arriba */
+    margin-bottom: 0.5rem;
+}
+
+.productName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    display: -webkit-box; /* Propiedad esencial para -webkit-line-clamp */
+    -webkit-line-clamp: 2; /* <-- Aquí está el prefijo */
+    line-clamp: 2; /* <-- ¡Añade esta línea para la propiedad estándar! */
+    -webkit-box-orient: vertical; /* Propiedad esencial para -webkit-line-clamp */
+    overflow: hidden;
+    min-height: 3rem;
+    line-height: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estrellas (Rating) */
+.rating {
+    color: #FFC107; /* Amarillo clásico para estrellas */
+    font-size: 0.9rem;
+}
+.ratingCount {
+    font-size: 0.85rem;
+    color: #777;
+    margin-left: 6px;
+}
+
+.priceContainer {
+    margin: 0.75rem 0;
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajusten si hay muchos elementos */
+    align-items: baseline;
+    gap: 0.75rem; /* Espaciado entre precios */
+}
+
+.currentPrice {
+    font-size: 1.5rem; /* Precio actual más grande */
+    font-weight: 800; /* Muy audaz */
+    color: #3E2092; /* Tu color morado oscuro */
+}
+
+/* Precio antiguo tachado */
+.oldPrice {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Botón "Añadir al carrito" */
+.addButton {
+    background-color: #922074; /* Tu color fucsia/magenta */
+    border-color: #922074;
+    font-weight: 700; /* Más audaz */
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.addButton:hover {
+    background-color: #782092; /* Tu morado medio al pasar el mouse */
+    border-color: #782092;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    box-shadow: 0 4px 10px rgba(146, 32, 116, 0.4); /* Sombra con tu color */
+}
